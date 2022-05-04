@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JANI">
         <activity
+            android:name=".Plan"
+            android:exported="false" />
+        <activity
             android:name=".Calender"
             android:exported="false" />
         <activity

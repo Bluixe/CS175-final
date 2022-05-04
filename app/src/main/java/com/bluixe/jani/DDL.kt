@@ -67,7 +67,7 @@ class DDL : AppCompatActivity() {
         val addButton = findViewById<FloatingActionButton>(R.id.add_todo)
         addButton.setOnClickListener {
             val ddl_dialog = layoutInflater.inflate(R.layout.ddl_dialog, findViewById(R.id.ddl_dialog))
-            var date: Long = 19700101
+            var date: Long = 20200101
             ddl_dialog.findViewById<Button>(R.id.choose).setOnClickListener {
                 val date_dialog = layoutInflater.inflate(R.layout.date_selector, findViewById(R.id.date_selector))
                 val datePicker = date_dialog.findViewById<DatePicker>(R.id.date_picker)
