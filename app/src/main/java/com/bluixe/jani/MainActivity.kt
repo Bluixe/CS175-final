@@ -11,12 +11,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val ddl_btn = findViewById<Button>(R.id.button1)
         val cal_btn = findViewById<Button>(R.id.button2)
+        val plan_btn = findViewById<Button>(R.id.button3)
         ddl_btn.setOnClickListener {
             val intent = Intent(this, DDL::class.java)
             startActivity(intent)
         }
         cal_btn.setOnClickListener {
             val intent = Intent(this, Calender::class.java)
+            startActivity(intent)
+        }
+        plan_btn.setOnClickListener {
+            val intent = Intent(this, Plan::class.java)
             startActivity(intent)
         }
     }

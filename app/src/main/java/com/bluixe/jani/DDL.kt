@@ -44,26 +44,6 @@ class DDL : AppCompatActivity() {
         }.start()
 
 
-
-//        val addItem = findViewById<TextView>(R.id.add_item)
-//        addItem.setOnClickListener {
-//            val content = "this"
-////            val date = SimpleDateFormat("yyyy-MM-dd").parse("2022-04-23")
-//            val date:Long = 432424
-//            Thread {
-//                dao.insetAll(TodoItem(0, date, content, true))
-////                val data = dao.getAll()
-////                adapter.setContentList(data)
-//                var data = dao.getAll()
-//                data = data.sortedBy { it.date }
-//
-//                runOnUiThread {
-//                    adapter.setContentList(data)
-//                    rv.adapter = adapter
-//                }
-//            }.start()
-//        }
-
         val addButton = findViewById<FloatingActionButton>(R.id.add_todo)
         addButton.setOnClickListener {
             val ddl_dialog = layoutInflater.inflate(R.layout.ddl_dialog, findViewById(R.id.ddl_dialog))
@@ -91,18 +71,17 @@ class DDL : AppCompatActivity() {
                 .setNegativeButton("取消", null)
                 .setPositiveButton("确定", DialogInterface.OnClickListener {
                         dialogInterface, i -> run {
-//                    val date = ddl_dialog.findViewById<TextView>(R.id.et).text.toString()
-                    val content = ddl_dialog.findViewById<EditText>(R.id.ct).text.toString()
-                    Thread {
-                        dao.insetAll(TodoItem(0, date, content, true))
-                        var data = dao.getAll()
-                        data = data.sortedBy { it.date }
+                            val content = ddl_dialog.findViewById<EditText>(R.id.ct).text.toString()
+                            Thread {
+                                dao.insetAll(TodoItem(0, date, content, true))
+                                var data = dao.getAll()
+                                data = data.sortedBy { it.date }
 
-                        runOnUiThread {
-                            adapter.setContentList(data)
-                            rv.adapter = adapter
-                        }
-                    }.start()
+                                runOnUiThread {
+                                    adapter.setContentList(data)
+                                    rv.adapter = adapter
+                                }
+                            }.start()
 
                 } })
                 .create()

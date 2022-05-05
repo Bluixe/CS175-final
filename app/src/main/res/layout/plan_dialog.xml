@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ddl_dialog"
+    android:id="@+id/plan_dialog"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -13,16 +13,8 @@
         android:hint="Todo..."
         android:inputType="text"
         android:lines="1"
-        android:id="@+id/ct"/>
+        android:id="@+id/pl_tt"/>
 
-<!--    <TextView-->
-<!--        android:layout_marginLeft="8dp"-->
-<!--        android:id="@+id/tv"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center_vertical"-->
-<!--        android:textAppearance="?attr/textAppearanceBody2"-->
-<!--        android:text="DDL:" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,22 +26,23 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="6dp"
             android:layout_gravity="center_vertical"
-            android:text="Due:"/>
-        <TextView
-            android:hint="YY/MM/DD"
+            android:text="内容:"/>
+        <EditText
+            android:hint="Details..."
             android:inputType="date"
-
-            android:id="@+id/et"
+            android:minLines="3"
+            android:id="@+id/pl_ct"
             android:textAppearance="?attr/textAppearanceBody2"
             android:layout_gravity="center_vertical"
+            android:gravity="top"
             android:layout_width="0dp"
             android:layout_weight="3"
             android:layout_height="wrap_content"
-        />
+            />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/choose"
-            android:text="选择"/>
+            android:text="清空"/>
     </LinearLayout>
 </LinearLayout>

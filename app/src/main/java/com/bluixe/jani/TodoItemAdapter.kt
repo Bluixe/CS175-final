@@ -8,12 +8,12 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class TodoItemAdapter(activity:DDL) : RecyclerView.Adapter<TodoItemAdapter.TodoIemViewHolder>() {
+class TodoItemAdapter(activity:DDL) : RecyclerView.Adapter<TodoItemAdapter.TodoItemViewHolder>() {
 
     private val contentList = mutableListOf<TodoItem>()
     private val ddlActivity = activity
 
-    inner class TodoIemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class TodoItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val date = view.findViewById<TextView>(R.id.date)
         private val itemContent = view.findViewById<TextView>(R.id.content)
         private val status = view.findViewById<TextView>(R.id.status)
@@ -46,14 +46,14 @@ class TodoItemAdapter(activity:DDL) : RecyclerView.Adapter<TodoItemAdapter.TodoI
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoIemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoItemViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.todo_item, parent, false)
 //        val v = View.inflate(parent.context, R.layout.todo_item, null)
-        return TodoIemViewHolder(view)
+        return TodoItemViewHolder(view)
 
     }
 
-    override fun onBindViewHolder(holder: TodoIemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TodoItemViewHolder, position: Int) {
         holder.bind(position, contentList[position])
     }
 
