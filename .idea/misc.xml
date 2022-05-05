@@ -15,10 +15,13 @@
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/activity_plan.xml" value="0.2123931623931624" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/date_selector.xml" value="0.2111111111111111" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/ddl_dialog.xml" value="0.1" />
+        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/fragment_blank.xml" value="0.26721014492753625" />
+        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/fragment_items_list.xml" value="0.26721014492753625" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/modify_dialog.xml" value="0.2123931623931624" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/plan_detail.xml" value="0.2123931623931624" />
-        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/plan_dialog.xml" value="0.18181818181818182" />
+        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/plan_dialog.xml" value="0.4" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/plan_item.xml" value="0.2123931623931624" />
+        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/time_selector.xml" value="0.18902991840435177" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/todo_item.xml" value="0.264" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/menu/top_app_bar.xml" value="0.36574074074074076" />
       </map>

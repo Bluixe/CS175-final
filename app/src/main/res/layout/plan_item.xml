@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
     <LinearLayout
+        android:id="@+id/pl_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -27,12 +28,13 @@
             android:layout_margin="0dp"/>
     </LinearLayout>
     <LinearLayout
+        android:background="@color/grey_50"
         android:id="@+id/pl_hidden"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:divider="@drawable/divider_thin"
-        android:showDividers="middle">
+        android:showDividers="none">
     <TextView
         android:id="@+id/pl_content"
         android:layout_width="match_parent"

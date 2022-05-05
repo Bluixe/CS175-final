@@ -39,6 +39,9 @@ class Plan : AppCompatActivity() {
         val addButton = findViewById<FloatingActionButton>(R.id.add_plan)
         addButton.setOnClickListener {
             val plan_dialog = layoutInflater.inflate(R.layout.plan_dialog, findViewById(R.id.plan_dialog))
+            plan_dialog.findViewById<Button>(R.id.clear).setOnClickListener {
+                plan_dialog.findViewById<EditText>(R.id.pl_ct).setText("")
+            }
             val dialog = MaterialAlertDialogBuilder(this)
             dialog.setView(plan_dialog)
                 .setNegativeButton("取消", null)
@@ -75,13 +78,62 @@ class Plan : AppCompatActivity() {
         }.start()
     }
 
-    fun changeTitle(item: PlanItem){
-        val dialog = MaterialAlertDialogBuilder(this)
-            .setTitle("修改标题：")
-            .set
+    fun deleteItem(item:PlanItem){
+        Thread {
+            dao.delete(item)
+            var data = dao.getAll()
+
+            runOnUiThread {
+                adapter.setContentList(data)
+                rv.adapter = adapter
+            }
+        }.start()
     }
 
+    fun changeTitle(item: PlanItem){
+        val modify_dialog = layoutInflater.inflate(R.layout.modify_dialog, findViewById(R.id.modify_dialog))
+        val dialog = MaterialAlertDialogBuilder(this)
+            .setView(modify_dialog)
+            .setTitle("修改标题：")
+            .setPositiveButton("确定", DialogInterface.OnClickListener {
+                    dialogInterface, i -> run {
+                        val title = modify_dialog.findViewById<EditText>(R.id.ct).text.toString()
+        //                        val content = plan_dialog.findViewById<EditText>(R.id.pl_ct).text.toString()
+                        Thread {
+                            dao.update(PlanItem(item.id, title, item.content, item.status))
+                            var data = dao.getAll()
+                            runOnUiThread {
+                                adapter.setContentList(data)
+                                rv.adapter = adapter
+                            }
+                        }.start()
+                    }
+            })
+            .setNegativeButton("取消", null)
+            .create()
+        dialog.show()
+    }
     fun changeContent(item: PlanItem){
-
+        val modify_dialog = layoutInflater.inflate(R.layout.modify_dialog, findViewById(R.id.modify_dialog))
+        val dialog = MaterialAlertDialogBuilder(this)
+            .setView(modify_dialog)
+            .setTitle("修改内容：")
+            .setPositiveButton("确定", DialogInterface.OnClickListener {
+                    dialogInterface, i -> run {
+                val content = modify_dialog.findViewById<EditText>(R.id.ct).text.toString()
+                //                        val content = plan_dialog.findViewById<EditText>(R.id.pl_ct).text.toString()
+                Thread {
+                    dao.update(PlanItem(item.id, item.title, content, item.status))
+                    var data = dao.getAll()
+                    runOnUiThread {
+                        adapter.setContentList(data)
+                        rv.adapter = adapter
+                    }
+                }.start()
+            }
+            })
+            .setNegativeButton("取消", null)
+            .create()
+        dialog.show()
     }
 }
