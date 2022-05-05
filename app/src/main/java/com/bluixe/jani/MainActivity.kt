@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         cal_btn.setOnClickListener {
-            val intent = Intent(this, Calender::class.java)
+            val intent = Intent(this, Calendar::class.java)
             startActivity(intent)
         }
         plan_btn.setOnClickListener {

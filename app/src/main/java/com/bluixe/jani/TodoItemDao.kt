@@ -13,6 +13,9 @@ interface TodoItemDao {
     @Query("SELECT * FROM todoitem")
     fun getAll(): List<TodoItem>
 
+    @Query("SELECT * FROM todoitem WHERE date == :date")
+    fun queryDate(date: Long): List<TodoItem>
+
     @Query("DELETE FROM todoitem")
     fun deleteAll()
 

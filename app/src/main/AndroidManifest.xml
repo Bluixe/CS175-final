@@ -13,7 +13,7 @@
             android:name=".Plan"
             android:exported="false" />
         <activity
-            android:name=".Calender"
+            android:name=".Calendar"
             android:exported="false" />
         <activity
             android:name=".DDL"

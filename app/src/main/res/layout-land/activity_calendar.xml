@@ -33,11 +33,10 @@
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-        <fragment
-            android:id="@+id/fragmentItemsList"
-            android:layout_height="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            tools:layout="@layout/fragment_items_list" />
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
 
