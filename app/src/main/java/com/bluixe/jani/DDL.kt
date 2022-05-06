@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.util.Calendar
 
 class DDL : AppCompatActivity() {
     lateinit var db: TodoItemDatabase
@@ -48,6 +49,8 @@ class DDL : AppCompatActivity() {
         addButton.setOnClickListener {
             val ddl_dialog = layoutInflater.inflate(R.layout.ddl_dialog, findViewById(R.id.ddl_dialog))
             var date: Long = 20200101
+            var calendar = Calendar.getInstance()
+            date = (calendar.get(Calendar.YEAR)*100 + calendar.get(Calendar.MONTH)+1)*100.toLong() + calendar.get(Calendar.DAY_OF_MONTH)
             ddl_dialog.findViewById<Button>(R.id.choose).setOnClickListener {
                 val date_dialog = layoutInflater.inflate(R.layout.date_selector, findViewById(R.id.date_selector))
                 val datePicker = date_dialog.findViewById<DatePicker>(R.id.date_picker)
