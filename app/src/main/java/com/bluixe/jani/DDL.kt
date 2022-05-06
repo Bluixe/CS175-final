@@ -50,10 +50,24 @@ class DDL : AppCompatActivity() {
             val ddl_dialog = layoutInflater.inflate(R.layout.ddl_dialog, findViewById(R.id.ddl_dialog))
             var date: Long = 20200101
             var calendar = Calendar.getInstance()
-            date = (calendar.get(Calendar.YEAR)*100 + calendar.get(Calendar.MONTH)+1)*100.toLong() + calendar.get(Calendar.DAY_OF_MONTH)
+            date = ((calendar.get(Calendar.YEAR)*100 + calendar.get(Calendar.MONTH)+1)*100.toLong() + calendar.get(Calendar.DAY_OF_MONTH))*10000
             ddl_dialog.findViewById<Button>(R.id.choose).setOnClickListener {
                 val date_dialog = layoutInflater.inflate(R.layout.date_selector, findViewById(R.id.date_selector))
                 val datePicker = date_dialog.findViewById<DatePicker>(R.id.date_picker)
+                val time_dialog = layoutInflater.inflate(R.layout.time_selector, findViewById(R.id.time_selector))
+                val timePicker = time_dialog.findViewById<TimePicker>(R.id.time_picker)
+                val timeSelector = MaterialAlertDialogBuilder(this)
+                    .setView(time_dialog)
+                    .setPositiveButton("确定", DialogInterface.OnClickListener {
+                            dialogInterface, i -> run {
+                                val hour = timePicker.hour
+                                val minute = timePicker.minute
+                                date = date + hour*100 + minute
+                                ddl_dialog.findViewById<TextView>(R.id.tt).text=String.format("%02d:%02d", hour, minute)
+
+                    } })
+                    .setNegativeButton("取消", null)
+                    .create()
                 val selector = MaterialAlertDialogBuilder(this)
                     .setView(date_dialog)
                     .setPositiveButton("确定", DialogInterface.OnClickListener {
@@ -62,8 +76,9 @@ class DDL : AppCompatActivity() {
                                 val month = datePicker.month + 1
                                 val year = datePicker.year
                                 val mul:Long = 100
-                                date = (year * mul + month)*mul + day
-                                ddl_dialog.findViewById<TextView>(R.id.et).text=String.format("%04d/%02d/%02d",year,month,day)
+                                date = ((year * mul + month)*mul + day)*10000
+                                ddl_dialog.findViewById<TextView>(R.id.et).text=String.format("%02d/%02d",month,day)
+                                timeSelector.show()
                     }  })
                     .setNegativeButton("取消",null)
                     .create()

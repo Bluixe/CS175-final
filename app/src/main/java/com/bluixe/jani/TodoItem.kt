@@ -15,5 +15,5 @@ data class TodoItem(
     @ColumnInfo(name = "content")
     val content: String?,
     @ColumnInfo(name = "status")
-    val status: Boolean?
+    val status: Boolean?,
 )

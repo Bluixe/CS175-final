@@ -20,7 +20,7 @@ class TodoItemAdapter(activity:DDL) : RecyclerView.Adapter<TodoItemAdapter.TodoI
         private val delete = view.findViewById<Button>(R.id.delete)
         fun bind(position: Int, content: TodoItem ){
             var text = content.date.toString()
-            text = text.substring(0,4) + "-" + text.substring(4, 6) + "-" + text.substring(6, 8)
+            text = text.substring(4, 6) + "-" + text.substring(6, 8) + " " + text.substring(8, 10) + ":" + text.substring(10,12)
             date.text = text
             itemContent.text = content.content
             if (content.status == true) {
