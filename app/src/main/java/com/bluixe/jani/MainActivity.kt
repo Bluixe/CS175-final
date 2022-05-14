@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         val ddl_btn = findViewById<Button>(R.id.button1)
         val cal_btn = findViewById<Button>(R.id.button2)
         val plan_btn = findViewById<Button>(R.id.button3)
+        val dia_btn = findViewById<Button>(R.id.button4)
         val intent = Intent(this, MyService::class.java)
         startService(intent)
         ddl_btn.setOnClickListener {
@@ -24,6 +25,10 @@ class MainActivity : AppCompatActivity() {
         }
         plan_btn.setOnClickListener {
             val intent = Intent(this, Plan::class.java)
+            startActivity(intent)
+        }
+        dia_btn.setOnClickListener {
+            val intent = Intent(this, Diary::class.java)
             startActivity(intent)
         }
     }

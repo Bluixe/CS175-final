@@ -10,11 +10,14 @@
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/drawable/divider.xml" value="0.264" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/drawable/divider_land.xml" value="0.264" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout-land/activity_base_image.xml" value="0.20042735042735044" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout-land/activity_calendar.xml" value="0.19829059829059828" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout-land/activity_calender.xml" value="0.2191358024691358" />
+        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/activity_base_image.xml" value="0.21153846153846154" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/activity_calendar.xml" value="0.3129528985507246" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/activity_calender.xml" value="0.264" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/activity_ddl.xml" value="0.25" />
+        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/activity_diary.xml" value="0.21153846153846154" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/activity_plan.xml" value="0.1" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/date_selector.xml" value="0.2111111111111111" />
@@ -26,7 +29,7 @@
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/plan_dialog.xml" value="0.4" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/plan_item.xml" value="0.2123931623931624" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/time_selector.xml" value="0.18902991840435177" />
-        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/todo_item.xml" value="0.536" />
+        <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/layout/todo_item.xml" value="0.21327967806841047" />
         <entry key="..\:/Documents/2022spring/CS175/final/app/src/main/res/menu/top_app_bar.xml" value="0.36574074074074076" />
       </map>
     </option>
